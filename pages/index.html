@@ -3,11 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Drexel Wean</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <h1>Welcome to the Home Page</h1>
-  <p>This is the main page of the website.</p>
+  <!-- MENU BAR -->
+  <header id="menubar">
+    <nav>
+      <span class="menuTitle">Drexel Wean</span>
+      <a href="https://github.com/DweanMachine" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/drexelwean" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:djwean12@gmail.com">Email</a>
+      <a href="../assets/docs/resume.pdf" download="Drexel Wean Resume">Resume</a>
+    </nav>
+    <span id="clock" aria-hidden="true"></span>
+  </header>
+
+  <main id="desktop">
+    <!-- INTRO -->
+    <section class="window" id="about">
+      <div class="titleBar"><span class="closeBox"></span><h2>About Drexel Wean</h2></div>
+      <div class="windowBody intro">
+        <h1>Drexel Wean</h1>
+        <p id="bio">
+          <b>Hi! My name is Drexel Wean.</b>
+          I am a cybersecurity professional and a soon-to-be High Point University graduate with a B.S. in Cybersecurity, a minor in Entrepreneurship.
+          I combine technical problem-solving with leadership, communication, and composure in high-pressure environments.
+          My experience spans secure software development, networking, system security, emergency response, team collaboration, and student organization leadership.
+
+          I am seeking opportunities to apply my cybersecurity knowledge, programming experience, and calm, disciplined approach to protecting systems, solving technical challenges, and contributing to high-performing security or technology teams.
+        </p>
+        <div class="buttons">
+          <a class="button" href="https://github.com/DweanMachine" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/drexelwean" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button" href="mailto:djwean12@gmail.com">Email</a>
+          <a class="button default" href="../assets/docs/resume.pdf" download="Drexel Wean Resume">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LinkedIn -->
+    <section class="window">
+      <div class="titleBar"><span class="closeBox"></span><h2>LinkedIn Posts</h2></div>
+      <div class="windowBody">
+        <div id="posts">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7484228521146445824?collapsed=1" height="340" allowfullscreen title="Embedded LinkedIn post"></iframe>
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7429238316060819456?collapsed=1" height="340" allowfullscreen title="Embedded LinkedIn post"></iframe>
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395123876067708928?collapsed=1" height="340" allowfullscreen title="Embedded LinkedIn post"></iframe>
+        </div>
+        <p><a class="button" href="https://www.linkedin.com/in/drexelwean/recent-activity/all/" target="_blank" rel="noopener noreferrer">See more posts</a></p>
+      </div>
+    </section>
+
+    <!-- GitHub -->
+    <section class="window">
+      <div class="titleBar"><span class="closeBox"></span><h2>GitHub Projects</h2></div>
+      <div class="statusLine"><span id="projectCount">Loading...</span><span>from github.com/DweanMachine</span></div>
+      <div class="windowBody">
+        <div id="projects"></div>
+        <p><a class="button" href="https://github.com/DweanMachine/" target="_blank" rel="noopener noreferrer">Open GitHub profile</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function tick() {
+      document.getElementById("clock").textContent =
+        new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    }
+    tick();
+    setInterval(tick, 15000);
+  </script>
+  <script type="module" src="../assets/js/get_repos.js"></script>
 </body>
 </html>
