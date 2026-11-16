@@ -42,7 +42,9 @@ function renderRepos(repos) {
 
         const meta = document.createElement("span");
         meta.className = "meta";
-        meta.textContent = `- ${repo.language ?? "n/a"} -`;
+        let repoLan = repo.language;
+        if (repoLan === "HTML" || repoLan ==="CSS") { repoLan = "Javascript"; }
+        meta.textContent = `- ${repoLan ?? "n/a"} -`;
         meta.style.fontSize = "0.75em";
 
         const desc = document.createElement("span");

@@ -5,6 +5,11 @@
     --font: Chicago, "Courier New", monospace;
 }
 
+::selection {
+    background-color: #000000; /* Put your desired highlight color here */
+    color: #f0f0f0;            /* Put the text color here */
+}
+
 * {
     box-sizing: border-box;
 }
@@ -123,8 +128,8 @@ a {
     position: absolute;
     left: 8px;
     top: 3px;
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     background: var(--paper);
     border: 2px solid var(--ink);
 }
@@ -263,10 +268,20 @@ iframe {
 }
 
 
-#bio {
-    text-align: justify;
+.bio {
+    text-align: left;
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1.4;
     padding-inline: 14px;
+}
+
+#headshot {
+    float: left;
+    width: 92px;
+    height: 92px;
+    object-fit: cover;
+    margin: 18px 16px 0 12px;   /* space on the left and bottom so text doesn't touch it */
+    border: 3px solid #000;
+    border-radius: 8px;
 }
